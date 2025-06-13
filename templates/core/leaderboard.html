@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Leaderboard</h1>
+<ol>
+{% for user, score in leaderboard %}
+<li>{{ user }} - {{ score }}</li>
+{% endfor %}
+</ol>
+<div class="mt-4">
+    <a href="{% url 'index' %}" class="btn btn-secondary">Back to Home</a>
+</div>
+{% endblock %}

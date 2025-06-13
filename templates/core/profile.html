@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Your Challenge History</h2>
+
+{% if submissions %}
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Challenge</th>
+      <th>Score</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for id, challenge, score, date in submissions %}
+    <tr>
+      <td>{{ id }}</td>
+      <td>{{ challenge }}</td>
+      <td>{{ score }}</td>
+      <td>{{ date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p>You haven't completed any challenges yet.</p>
+{% endif %}
+
+<a href="/" class="btn btn-secondary mt-3">← Back to Home</a>
+{% endblock %}

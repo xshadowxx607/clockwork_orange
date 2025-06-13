@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ challenge.1 }} - Result</h2>
+<p><strong>Raw Score:</strong> {{ score }}</p>
+<p><strong>Time Penalty:</strong> -{{ time_penalty }}</p>
+<p><strong>Hint Penalty:</strong> -{{ hint_penalty }}</p>
+<p><strong>Final Score:</strong> {{ final_score }}</p>
+<p><strong>Time Elapsed:</strong> {{ elapsed }} seconds</p>
+<a href="/" class="btn btn-primary mt-3">Back to Home</a>
+{% endblock %}
